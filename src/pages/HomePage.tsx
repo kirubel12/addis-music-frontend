@@ -21,7 +21,7 @@ export default function Home() {
         justify-content: end;
         align-items: center;
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 90px;
         padding-right: 20px;
       `
 
