@@ -1,13 +1,18 @@
-
+import { BrowserRouter, Route, Routes} from "react-router-dom"
+import Home from "./pages/HomePage"
+import AddSongPage from "./pages/AddSongPage"
+import Dashboard from "./pages/DashboardPage"
 
 function App() {
-
-
   return (
     <>
-      <div>
-        <h1>Hello</h1>
-      </div>
+    <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/addsong" element={<AddSongPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+       </Routes>
+      </BrowserRouter>
     </>
   )
 }
