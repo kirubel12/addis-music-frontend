@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 import {useState} from 'react'
 import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
+
 
         const Heading_one = styled.h1`
         display: flex;
@@ -44,9 +47,15 @@ export default function AddSong(){
     year: 0
   });
   const handleSubmit= (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(song);
+   event.preventDefault();
+    console.log(song);  
     dispatch({type: "ADD_SONG", payload: song});
+    toast.success("Successfully added 👍👍",{
+                autoClose: 500,
+                theme: 'dark'
+                
+            })
+    dispatch({type: "FETCH_SONGS"})      
     
     
   }

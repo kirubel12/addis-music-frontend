@@ -13,11 +13,7 @@ type SongInterface = {
     gener: string,
     year: number
 }
-const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("Typed")
-    // Do something with the form data
-  };
+
 export default function Home() {
  const  Songs = useSelector((state) => state?.songs)
  const {data,loader,error }=Songs
@@ -109,7 +105,7 @@ export default function Home() {
         <Navbar />
         <main>
            <DIV>
-            <Input type="text" />
+            <Input type="text" placeholder="Search" />
             <Button>Search</Button>
            </DIV>
            <Container>

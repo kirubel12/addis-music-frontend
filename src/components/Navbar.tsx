@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { Link } from "react-router-dom"
 export default function Navbar(){
 
     const Nav = styled.nav`
@@ -33,8 +34,10 @@ border: none;
 font-size: 15px;
 font-family: 'Poppins';
 font-weight: 600;
+
       
       `
+     
       const Logo = styled.h1`
         font-weight: 600;
         
@@ -48,7 +51,9 @@ font-weight: 600;
           <Logo>Addis Music</Logo>
          </div>
          <div>
-          <Button>Dashboard</Button>
+          <Button>
+            Dashboard
+          </Button>
          </div>
   
 </NavItem>
