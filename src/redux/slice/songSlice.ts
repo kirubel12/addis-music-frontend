@@ -20,6 +20,9 @@ export const songSlice = createSlice({
         SONGS_ERROR: (state,action) => {
  state.error = action.payload;
             state.loader = false;
+        },
+        DELETE_SONG: (state, action) =>{
+          state.data = state.data.filter(song => song.id !== action.payload);  
         }
     }
 })

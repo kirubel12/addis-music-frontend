@@ -1,10 +1,9 @@
 import styled from "@emotion/styled"
-import { Link } from "react-router-dom"
 export default function Navbar(){
 
     const Nav = styled.nav`
       background: #fff;
-      min-height: 80px;
+      min-height: 70px;
       width: 100%;
       position: fixed;
       z-index: 1;
@@ -23,37 +22,28 @@ export default function Navbar(){
  
 
     `
-    const Button = styled.button`
-     background: #6E4B4C;
-color: #fff;
-padding: 15px 5px;
-margin: 0;
-outline: none;
-border-radius: 5px;
-border: none;
-font-size: 15px;
-font-family: 'Poppins';
-font-weight: 600;
 
-      
-      `
      
       const Logo = styled.h1`
         font-weight: 600;
+        font-size: 30px;
+      
         
       `
 
 
     return(
         <Nav>
-<NavItem>
+      <NavItem>
          <div>
-          <Logo>Addis Music</Logo>
+          <Logo>
+            <a href="/">Addis Music</a>
+          </Logo>
          </div>
          <div>
-          <Button>
-            Dashboard
-          </Button>
+          <button className="bg-accent px-3 py-2 mt-4 text-white rounded-md">
+            <a href="/dashboard">Dashboard</a>
+          </button>
          </div>
   
 </NavItem>

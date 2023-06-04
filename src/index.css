@@ -25,3 +25,6 @@ body{
     background-color: #f00;
     transition: background-color 0.10s ease-in-out;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

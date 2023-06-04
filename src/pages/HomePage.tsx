@@ -79,7 +79,7 @@ export default function Home() {
       const SongCard = styled.div`
         max-height: 40px;
         background: #fff;
-        padding: 20px;
+        padding: 30px;
         border-radius: 10px;
         width: 700px;
         display: flex;
@@ -98,9 +98,7 @@ export default function Home() {
         right: 0;
         
       `
-      const Heading = styled.h1`
-        width: 20%;
-      `
+    
     return <div>
         <Navbar />
         <main>
@@ -116,11 +114,14 @@ export default function Home() {
             <SongContainer>
           {data && data.map((song:SongInterface) => {
             return <SongCard key={song._id}>
-                <Heading>{song.title}</Heading>
-                <Heading>{song.artist}</Heading>
-                <Heading>{song.album}</Heading>
-                <Heading>{song.gener}</Heading>
-                <Heading>{song.year}</Heading>
+                <h3 className="text-lg font bold w-[25%] gap-4 mr-4">{song.title}</h3>
+                <h3 className="text-lg w-[25%] gap-4 mr-4">{song.artist}</h3>
+                <h3 className="text-lg w-[25%] gap-4 mr-4">{song.album}</h3>
+                <h3 className="text-lg w-[25%] gap-4 mr-4">{song.gener}</h3>
+                <h3 className="text-lg w-[25%] gap-4 mr-4">{song.year}</h3>
+                <button className="bg-red-600 text-white px-2 py-2 text-base rounded-md">Delete</button>
+                <button className="bg-blue-600 text-white px-2 py-2 text-base ml-4 rounded-md">Edit</button>
+                
             </SongCard>
           
           },) 

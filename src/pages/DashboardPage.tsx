@@ -1,7 +1,12 @@
+import Navbar from "../components/Navbar"
+
 export default function Dashboard() {
   return (
-    <div>
-        <h1>Dashboard</h1>
-    </div>
+    <>
+      <Navbar />
+      <div className="mt-[87px] ml-4">
+       <h1 className="text-2xl font-bold">Dashboard</h1>
+      </div>
+    </>
   );
 }

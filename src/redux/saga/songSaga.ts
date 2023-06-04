@@ -42,9 +42,22 @@ function* addSong(action:any){
   }
 
 }
+
+function* deleteSong(action:any){
+  try {
+     const {data} = yield call(axios.delete,`${BASE_URL}/deletesong`,action.payload)
+    console.log( "Deleted ", data);
+
+  }
+   catch (error) {
+    console.log(error.message);
+  }
+
+}
 function* rootSaga() {
     yield takeEvery('FETCH_SONGS', fetchSongs)
     yield takeEvery('ADD_SONG',addSong)
+    yield takeEvery('DELETE_SONG',deleteSong)
 }
 
 export default rootSaga;
